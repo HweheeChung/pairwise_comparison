@@ -149,7 +149,7 @@ def my_extract_scores(n_players, comparisons: List[Tuple[T, T]], method='rc') ->
     elif method == 'Borda':
         for w, l in comparisons:
             A[l, w] += 1
-            A[w, l] -= 1
+            #A[w, l] -= 1
         scores = np.sum(A, axis=0)
 
     elif method == 'MLE':
